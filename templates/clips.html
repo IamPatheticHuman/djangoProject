@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's ready</title>
+</head>
+<body>
+<center>
+    <button><a href="/add-film/">Add Video</a></button>
+</center>
+<h1>I want to watch something</h1>
+{% for i in object_list %}
+    <hr>
+    <h2>{{i.title}}</h2>
+    <img src="{{ i.image.url }}" height="200px" width="200px">
+    <p>{{ i.description }}</p>
+    <p>{{i.genre}}</p>
+    <a href="/tvshow_detail/{{i.id}}">More</a>
+{% endfor %}
+</body>
+</html>
